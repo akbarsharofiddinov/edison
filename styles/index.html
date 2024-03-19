@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edison Restaurant</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="./styles/swiper-bundle.min.css" />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link
+      href="https://unpkg.com/css.gg@2.0.0/icons/css/search.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/css.gg@2.0.0/icons/css/arrow-left.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="modal">
+      <!-- Section Feedback -->
+      <div class="feedback-inner">
+        <h1 class="title">Оцените нас!</h1>
+        <form>
+          <div class="ratingBoxes">
+            <div class="kitchenRating rating-box">
+              <label>Кухня</label>
+              <div>
+                <i class="fa-regular fa-star kitchenStar"></i>
+                <i class="fa-regular fa-star kitchenStar"></i>
+                <i class="fa-regular fa-star kitchenStar"></i>
+                <i class="fa-regular fa-star kitchenStar"></i>
+                <i class="fa-regular fa-star kitchenStar"></i>
+              </div>
+            </div>
+            <div class="interiorRating rating-box">
+              <label>Интерьер</label>
+              <div>
+                <i class="fa-regular fa-star interiorStar"></i>
+                <i class="fa-regular fa-star interiorStar"></i>
+                <i class="fa-regular fa-star interiorStar"></i>
+                <i class="fa-regular fa-star interiorStar"></i>
+                <i class="fa-regular fa-star interiorStar"></i>
+              </div>
+            </div>
+            <div class="servicesRating rating-box">
+              <label>Обслуживания</label>
+              <div>
+                <i class="fa-regular fa-star serviceStar"></i>
+                <i class="fa-regular fa-star serviceStar"></i>
+                <i class="fa-regular fa-star serviceStar"></i>
+                <i class="fa-regular fa-star serviceStar"></i>
+                <i class="fa-regular fa-star serviceStar"></i>
+              </div>
+            </div>
+            <div class="atmosphereRating rating-box">
+              <label>Атмосфера</label>
+              <div>
+                <i class="fa-regular fa-star atmosphereStar"></i>
+                <i class="fa-regular fa-star atmosphereStar"></i>
+                <i class="fa-regular fa-star atmosphereStar"></i>
+                <i class="fa-regular fa-star atmosphereStar"></i>
+                <i class="fa-regular fa-star atmosphereStar"></i>
+              </div>
+            </div>
+          </div>
+          <div class="messageBox">
+            <label>Ваши предложения и жалоби</label>
+            <textarea cols="30" rows="5" autocomplete="off"></textarea>
+          </div>
+          <button>Отправить</button>
+        </form>
+      </div>
+      <!-- =============================================== -->
+    </div>
+    <main class="main">
+      <header class="header">
+        <div class="container">
+          <div class="header-inner">
+            <a href="/" class="logo">
+              <img src="./src/images/IMG_8859.PNG" alt="edison-logo" />
+              <div class="title-box">
+                <h1 id="title">Edison</h1>
+                <span>Restaurant Nukus</span>
+              </div>
+            </a>
+            <button class="feedbackBtn">Оставить отзыв</button>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="swiper banner">
+          <div class="swiper-wrapper">
+            <img
+              src="./src/images/banner/banner.jpg"
+              alt="banner-image"
+              class="swiper-slide"
+            />
+            <img
+              src="./src/images/banner/banner-2.jpg"
+              alt="banner-image"
+              class="swiper-slide"
+            />
+            <img
+              src="./src/images/banner/banner-3.jpg"
+              alt="banner-image"
+              class="swiper-slide"
+            />
+          </div>
+        </div>
+        <!-- ===================== Search Box ======================== -->
+        <div class="search-box">
+          <button id="searchIcon"><i class="gg-search"></i></button>
+          <input
+            type="search"
+            id="searchInput"
+            autocomplete="off"
+            placeholder="Search..."
+          />
+        </div>
+
+        <!-- ===================== Categories ======================== -->
+        <div class="swiper mySwiper">
+          <div class="category-menu swiper-wrapper">
+            <a class="category_item active swiper-slide" href="#">Pizza</a>
+            <a class="category_item swiper-slide" href="#">Burger</a>
+            <a class="category_item swiper-slide" href="#">Drinks</a>
+            <a class="category_item swiper-slide" href="#">Sushi</a>
+            <a class="category_item swiper-slide" href="#">Pizza</a>
+            <a class="category_item swiper-slide" href="#">Burger</a>
+            <a class="category_item swiper-slide" href="#">Drinks</a>
+            <a class="category_item swiper-slide" href="#">Sushi</a>
+            <a class="category_item swiper-slide" href="#">Pizza</a>
+            <a class="category_item swiper-slide" href="#">Burger</a>
+            <a class="category_item swiper-slide" href="#">Drinks</a>
+            <a class="category_item swiper-slide" href="#">Sushi</a>
+          </div>
+        </div>
+
+        <!-- ===================== Menu ======================== -->
+        <section class="section-menu">
+          <div class="foods">
+            <div class="food-card">
+              <img src="./src/images/foods/photo-1.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-2.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-3.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-4.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-5.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-6.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-7.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-8.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-9.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-10.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-11.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-12.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-13.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-14.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-15.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-16.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-17.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-18.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-19.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-20.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-21.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-22.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-23.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-24.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-25.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-26.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-27.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-28.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-29.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-30.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-31.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-32.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-33.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-34.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-35.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-36.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-37.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-38.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-39.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-40.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-41.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-42.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-43.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-44.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-45.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-46.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-47.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-48.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-49.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-50.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-51.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-52.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+            <div class="food-card">
+              <img src="./src/images/foods/photo-53.jpg" />
+              <div class="food-card_body">
+                <h1 class="food-name">Food name</h1>
+                <p class="food-price">5000 сумм</p>
+                <!-- <button class="add-toCart_Btn">+ Добавить</button>
+                <div class="counter-box">
+                  <button class="minus">−</button>
+                  <p>0</p>
+                  <button class="plus">+</button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Swiper JS -->
+    <script src="./src/swiper-bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/32ee8f9848.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- My Script -->
+    <script src="./src/main.js"></script>
+  </body>
+</html>

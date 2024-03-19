@@ -1,0 +1,397 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  user-select: none;
+}
+
+/* font-family: "Lato", sans-serif; */
+
+html,
+body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+
+.container {
+  max-width: 380px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0 20px 0;
+}
+
+.main {
+  display: block;
+}
+
+.main.hide {
+  display: none;
+}
+
+/* Header =========================================== */
+
+.header .container {
+  padding: 10px 0 0 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feedbackBtn {
+  display: block;
+  background-color: #fbc100;
+  color: #000;
+  border: none;
+  text-transform: capitalize;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 11px;
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: transform 0.1s ease-in-out;
+}
+
+.feedbackBtn:active {
+  transform: scale(0.9);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+}
+
+.logo img {
+  width: 65px;
+}
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-box h1 {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.title-box span {
+  color: #999;
+  font-size: 13px;
+}
+
+.search-box {
+  margin-top: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #e9e9e9;
+  border-radius: 7px;
+}
+
+#searchInput {
+  width: 100%;
+  border: none;
+  padding: 12px 7px;
+  font-size: 14px;
+  background-color: transparent;
+  position: relative;
+  padding-left: 35px;
+}
+
+#searchIcon {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+
+/* ===================================================== */
+
+/* Banner ========================================== */
+
+.banner {
+  width: 100%;
+  height: 200px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.swiper.banner {
+  margin: 0 !important;
+}
+
+.swiper-wrapper img {
+  width: 100% !important;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ===================================================== */
+
+/* Category ========================================= */
+
+.category-menu {
+  display: flex;
+  gap: 12px;
+}
+
+.swiper {
+  margin-top: 25px !important;
+}
+
+.category-menu::-webkit-scrollbar {
+  width: 1px;
+}
+
+.category_item {
+  background-color: #fbc100;
+  color: #000;
+  padding: 6px 18px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  opacity: 0.5 !important;
+  transition: transform 0.1s;
+}
+
+.swiper-slide {
+  width: auto !important;
+}
+
+.category_item.active {
+  opacity: 1 !important;
+}
+
+.category_item:active {
+  transform: scale(0.9);
+}
+
+/* ============================================================ */
+/* Menu ================================================== */
+
+.section-menu {
+  margin: 25px 0 70px 0;
+}
+
+.foods {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 170px);
+  row-gap: 20px;
+  column-gap: 12px;
+}
+
+.food-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.food-card img {
+  max-width: 180px;
+  max-height: 119.95px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.food-card_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px 8px;
+}
+
+.food-name {
+  font-size: 16px;
+}
+
+.food-price {
+  font-size: 13px;
+  font-weight: 400;
+  color: #999;
+}
+
+/* .add-toCart_Btn {
+  display: block;
+  background-color: #fbc100;
+  color: #000;
+  border: none;
+  text-transform: capitalize;
+  border-radius: 4px;
+  padding: 11px 0;
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: transform 0.1s ease-in-out;
+}
+
+.add-toCart_Btn.active {
+  display: none;
+} */
+
+.food-card_bottom span:active {
+  transform: scale(0.9);
+}
+
+.food-card_body {
+  position: relative;
+}
+
+.counter-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  font-size: 14px;
+  display: none;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.counter-box button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  width: 42px;
+  border-radius: 4px;
+  height: 37px;
+  color: #000;
+  background-color: #fbc100;
+
+  transition: background-color 0.1s;
+}
+
+.counter-box p {
+  width: 36px;
+  text-align: center;
+  color: #000;
+}
+
+.counter-box button:active {
+  background-color: #dbdbdb;
+}
+
+.counter-box.active {
+  display: flex;
+}
+
+/* FeedBack Section ============================================== */
+
+.feedback-inner {
+  background-color: #fff;
+  max-width: 350px;
+  height: 600px;
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 8px;
+
+  position: relative;
+}
+
+.feedback-inner .title {
+  text-align: center;
+  font-size: 18px;
+}
+
+.feedback-inner form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  height: 100%;
+  margin-top: 24px;
+}
+
+.messageBox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.messageBox label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.messageBox textarea {
+  resize: none;
+  border-radius: 4px;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #eee;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 7px;
+  font-family: "Lato", sans-serif;
+}
+
+.ratingBoxes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ratingBoxes .rating-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.rating-box label {
+  font-weight: 600;
+}
+
+.fa-solid.fa-star {
+  color: #fbc100;
+}
+
+.feedback-inner form button {
+  background-color: #fbc100;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 7px;
+  font-size: 15px;
+
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  transition: transform 0.1s ease-out;
+}
+
+/* Modal ========================================== */
+.modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.modal.active {
+  display: flex;
+}
